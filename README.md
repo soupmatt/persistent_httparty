@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/soupmatt/persistent_httparty.png?branch=master)](http://travis-ci.org/soupmatt/persistent_httparty)
+
 # persistent_httparty
 
 Persistent HTTP connections for HTTParty!
@@ -18,8 +20,8 @@ Or install it yourself as:
 
 ## Requirements
 
-* httparty
-* persistent_http
+* [httparty](/jnunemaker/httparty)
+* [persistent_http](/bpardee/persistent_http)
 * You like to Keep-Alive the party!
 
 ## Usage
@@ -31,7 +33,6 @@ normal.
 class Twitter
   include HTTParty
   persistent_connection_adapter
-
 end
 ```
 
