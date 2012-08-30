@@ -36,6 +36,10 @@ class Twitter
 end
 ```
 
+## License
+
+Distributed under the [MIT License](LICENSE)
+
 ## Contributing
 
 1. Fork it
