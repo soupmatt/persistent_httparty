@@ -1,6 +1,6 @@
-# PersistentHttparty
+# persistent_httparty
 
-TODO: Write a gem description
+Persistent HTTP connections for HTTParty!
 
 ## Installation
 
@@ -16,9 +16,24 @@ Or install it yourself as:
 
     $ gem install persistent_httparty
 
+## Requirements
+
+* httparty
+* persistent_http
+* You like to Keep-Alive the party!
+
 ## Usage
 
-TODO: Write usage instructions here
+Just call `persistent_connection_adapter` and then use HTTParty as
+normal.
+
+```ruby
+class Twitter
+  include HTTParty
+  persistent_connection_adapter
+
+end
+```
 
 ## Contributing
 
