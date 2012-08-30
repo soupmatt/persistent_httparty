@@ -38,7 +38,7 @@ end
 
 ## License
 
-Distributed under the [MIT License](LICENSE)
+Distributed under the [MIT License](/soupmatt/persistent_httparty/blob/master/LICENSE)
 
 ## Contributing
 
