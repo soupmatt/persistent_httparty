@@ -5,8 +5,9 @@ gemspec
 
 gem 'httparty', :git => 'git://github.com/vibes/httparty.git'
 
-group :development do
+group :tools do
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'growl', :group => :darwin
 end
