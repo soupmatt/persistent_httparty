@@ -1,0 +1,1 @@
+require 'persistent_httparty'
