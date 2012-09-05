@@ -1,3 +1,4 @@
+require 'thread' if RUBY_VERSION < '1.9' # hack fix for ruby 1.8 until https://github.com/bpardee/gene_pool/pull/1 is merged
 require 'persistent_http'
 
 module HTTParty::Persistent
