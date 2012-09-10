@@ -4,18 +4,32 @@ describe HTTParty::Persistent::ConnectionAdapter do
   let(:uri) { URI 'http://foo.com:8085' }
   let(:connection_adapter_options) { {} }
   let(:options) { {:connection_adapter_options => connection_adapter_options} }
-  let(:adapter) { HTTParty::Persistent::ConnectionAdapter.new(uri, options) }
+  let!(:adapter) { HTTParty::Persistent::ConnectionAdapter.new }
   subject { adapter }
 
-  it { should be_kind_of(HTTParty::ConnectionAdapter) }
+  describe "#call" do
+    subject { adapter.call(uri, options) }
 
-  describe "#connection" do
-    describe "the resulting connection" do
-      subject { adapter.connection }
+    it "returns a PersistentHTTP" do
+      subject.should be_a PersistentHTTP
+    end
 
+    it "returns the same PersistentHTTP across calls" do
+      adapter.call(uri, options).should be subject
+    end
+
+    describe "the resulting PersistentHTTP" do
+      subject { adapter.call(uri, options) }
+
+      it { should_not be_nil }
       it { should be_instance_of PersistentHTTP }
       its(:host) { should == uri.host }
       its(:port) { should == uri.port }
+
+      it "is the same across multiple calls" do
+        adapter.call(uri, options).should be subject
+        adapter.call(uri, options).should be subject
+      end
 
       context "when dealing with ssl" do
         Spec::Matchers.define :use_ssl do
@@ -67,14 +81,14 @@ describe HTTParty::Persistent::ConnectionAdapter do
         context "is set to $stderr" do
           let(:options) { {:debug_output => $stderr} }
           it "has debug output set" do
-            adapter.connection.debug_output.should == $stderr
+            subject.debug_output.should == $stderr
           end
         end
 
         context "is not provided" do
           let(:options) { {} }
           it "does not set_debug_output" do
-            adapter.connection.debug_output.should be_nil
+            subject.debug_output.should be_nil
           end
         end
       end

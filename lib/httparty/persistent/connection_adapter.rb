@@ -1,10 +1,18 @@
-require 'thread' if RUBY_VERSION < '1.9' # hack fix for ruby 1.8 until https://github.com/bpardee/gene_pool/pull/1 is merged
 require 'persistent_http'
 
 module HTTParty::Persistent
-  class ConnectionAdapter < HTTParty::ConnectionAdapter
+  class ConnectionAdapter
 
-    def connection
+    attr_accessor :persistent_http
+
+    def call(uri, options)
+      if @persistent_http.nil?
+        @persistent_http = build_persistent_http(uri, options)
+      end
+      @persistent_http
+    end
+
+    def build_persistent_http(uri, options)
       opts = {:url => uri}
       opts.merge!(options[:connection_adapter_options]) if options[:connection_adapter_options]
       if options[:timeout] && (options[:timeout].is_a?(Integer) || options[:timeout].is_a?(Float))
