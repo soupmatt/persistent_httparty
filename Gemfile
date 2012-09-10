@@ -9,5 +9,6 @@ group :tools do
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'listen', '0.4.7'
   gem 'growl', :group => :darwin
 end

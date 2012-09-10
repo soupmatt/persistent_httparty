@@ -20,9 +20,8 @@ Or install it yourself as:
 
 ## Requirements
 
-* [httparty](/jnunemaker/httparty)
-* [persistent_http](/bpardee/persistent_http)
-* You like to Keep-Alive the party!
+* [httparty](/jnunemaker/httparty) and [persistent_http](/bpardee/persistent_http)
+* You like to `Keep-Alive` the party!
 
 ## Usage
 
@@ -36,9 +35,31 @@ class Twitter
 end
 ```
 
+You can also pass in parameters to the `persistent_http` gem. The
+regular HTTParty config will be passed through as applicable.
+
+```ruby
+class MyCoolRestClient
+  include HTTParty
+  persistent_connection_adapter { :name => 'my_cool_rest_client',
+                                  :pool_size => 2,
+                                  :idle_timeout => 10,
+                                  :keep-alive => 30 }
+end
+```
+
 ## License
 
 Distributed under the [MIT License](/soupmatt/persistent_httparty/blob/master/LICENSE)
+
+## Special Thanks
+
+* To @jnunemaker for maintaining a tight ship on the extremely useful
+[httparty](/jnunemaker/httparty)
+* To @bpardee for writing the best persistent http connection library
+  for ruby I've found in [persistent_http](/bpardee/persistent_http)
+* To @vibes for letting me open source as much of the work I do there
+  as possible.
 
 ## Contributing
 
