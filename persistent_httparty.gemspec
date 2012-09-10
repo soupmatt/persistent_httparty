@@ -12,9 +12,9 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Persistent HTTP connections for HTTParty}
   gem.homepage      = "https://github.com/soupmatt/persistent_httparty"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files            = `git ls-files -- lib/*`.split("\n")
+  gem.files           += %w[README.md LICENSE CHANGELOG.md]
+  gem.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   gem.require_paths = ["lib"]
 
   gem.add_dependency "httparty", "~> 0.9.0"

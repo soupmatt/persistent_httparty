@@ -1,3 +1,3 @@
-# 0.0.1 - Unreleased
+# 0.1.0 - 2012-09-09
 
-* initial implementation with basic features only
+* initial release
