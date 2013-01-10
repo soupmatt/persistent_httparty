@@ -45,7 +45,7 @@ class MyCoolRestClient
   persistent_connection_adapter { :name => 'my_cool_rest_client',
                                   :pool_size => 2,
                                   :idle_timeout => 10,
-                                  :keep-alive => 30 }
+                                  :keep_alive => 30 }
 end
 ```
 
