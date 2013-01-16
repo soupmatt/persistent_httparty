@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "persistent_http"
 
   gem.add_development_dependency "rake"
-  gem.add_development_dependency "rspec", "~> 2.11.0"
+  gem.add_development_dependency "rspec", "~> 2.12"
   gem.add_development_dependency "cucumber"
   gem.add_development_dependency "webmock"
 end

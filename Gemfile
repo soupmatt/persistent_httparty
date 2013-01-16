@@ -9,6 +9,8 @@ group :tools do
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-cucumber'
-  gem 'listen', '0.4.7'
-  gem 'growl', :group => :darwin
+  group :darwin do
+    gem 'ruby_gntp'
+    gem 'rb-fsevent'
+  end
 end
