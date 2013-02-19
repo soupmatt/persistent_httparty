@@ -32,7 +32,7 @@ describe HTTParty::Persistent::ConnectionAdapter do
       end
 
       context "when dealing with ssl" do
-        Spec::Matchers.define :use_ssl do
+        RSpec::Matchers.define :use_ssl do
           match do |connection|
             connection.use_ssl
           end
