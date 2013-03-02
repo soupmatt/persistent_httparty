@@ -1,10 +1,14 @@
-[![Build Status](https://secure.travis-ci.org/soupmatt/persistent_httparty.png?branch=master)](http://travis-ci.org/soupmatt/persistent_httparty)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/soupmatt/persistent_httparty)
-[![Dependency Status](https://gemnasium.com/soupmatt/persistent_httparty.png)](https://gemnasium.com/soupmatt/persistent_httparty)
-
 # persistent_httparty
 
 Persistent HTTP connections for HTTParty!
+
+[![Gem Version](https://badge.fury.io/rb/persistent_httparty.png)](http://badge.fury.io/rb/persistent_httparty)
+
+[![Build Status](https://secure.travis-ci.org/soupmatt/persistent_httparty.png?branch=master)](http://travis-ci.org/soupmatt/persistent_httparty)
+
+[![Dependency Status](https://gemnasium.com/soupmatt/persistent_httparty.png)](https://gemnasium.com/soupmatt/persistent_httparty)
+
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/soupmatt/persistent_httparty)
 
 ## Installation
 
