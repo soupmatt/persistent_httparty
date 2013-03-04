@@ -6,7 +6,7 @@ guard 'bundler' do
   watch(/^.+\.gemspec/)
 end
 
-guard 'rspec', :version => 2, :cli => '-f doc' do
+guard 'rspec', :cli => '-f doc' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('Gemfile') { "spec" }
