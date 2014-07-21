@@ -4,16 +4,11 @@ rvm:
   - 1.9.2
   - 1.9.3
   - 2.0.0
-  - ruby-head
+  - 2.1
   - jruby-18mode
   - jruby-19mode
-  - jruby-head
-  - rbx-18mode
-  - rbx-19mode
+  - rbx-2
 bundler_args: --without tools darwin
 matrix:
   allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby-head
-    - rvm: rbx-18mode
-    - rvm: rbx-19mode
+    - rvm: rbx-2

@@ -12,3 +12,7 @@ group :tools do
     gem 'rb-fsevent'
   end
 end
+
+platform :rbx do
+  gem 'rubysl'
+end
