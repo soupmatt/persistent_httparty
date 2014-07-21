@@ -8,7 +8,7 @@ Persistent HTTP connections for HTTParty!
 
 [![Dependency Status](https://gemnasium.com/soupmatt/persistent_httparty.png)](https://gemnasium.com/soupmatt/persistent_httparty)
 
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/soupmatt/persistent_httparty)
+[![Code Climate](https://codeclimate.com/github/soupmatt/persistent_httparty.png)](https://codeclimate.com/github/soupmatt/persistent_httparty)
 
 ## Installation
 
