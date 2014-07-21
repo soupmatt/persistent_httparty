@@ -11,7 +11,9 @@ group :tools do
     gem 'ruby_gntp'
     gem 'rb-fsevent'
   end
-end
+end unless RUBY_VERSION < "1.9.3"
+
+gem 'json', :platform => :mri_18
 
 platform :rbx do
   gem 'rubysl'

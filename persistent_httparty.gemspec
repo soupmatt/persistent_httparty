@@ -17,7 +17,11 @@ Gem::Specification.new do |gem|
   gem.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "httparty", "~> 0.9"
+  if RUBY_VERSION >= "1.9.3"
+    gem.add_dependency "httparty", "~> 0.9"
+  else
+    gem.add_dependency "httparty", ">= 0.9", "< 0.12"
+  end
   gem.add_dependency "persistent_http", "< 2"
 
   gem.add_development_dependency "rake"
