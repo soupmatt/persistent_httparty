@@ -47,10 +47,10 @@ regular HTTParty config will be passed through as applicable.
 ```ruby
 class MyCoolRestClient
   include HTTParty
-  persistent_connection_adapter { :name => 'my_cool_rest_client',
-                                  :pool_size => 2,
-                                  :idle_timeout => 10,
-                                  :keep_alive => 30 }
+  persistent_connection_adapter :name => 'my_cool_rest_client',
+                                :pool_size => 2,
+                                :idle_timeout => 10,
+                                :keep_alive => 30
 end
 ```
 
