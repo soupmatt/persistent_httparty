@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Requirements
 
-* [httparty](/jnunemaker/httparty) and [persistent_http](/bpardee/persistent_http)
+* [httparty](https://github.com/jnunemaker/httparty) and [persistent_http](https://github.com/bpardee/persistent_http)
 * You like to `Keep-Alive` the party!
 
 ## Usage
@@ -56,14 +56,14 @@ end
 
 ## License
 
-Distributed under the [MIT License](/soupmatt/persistent_httparty/blob/master/LICENSE)
+Distributed under the [MIT License](LICENSE)
 
 ## Special Thanks
 
 * To @jnunemaker for maintaining a tight ship on the extremely useful
-[httparty](/jnunemaker/httparty)
+[httparty](https://github.com/jnunemaker/httparty)
 * To @bpardee for writing the best persistent http connection library
-  for ruby I've found in [persistent_http](/bpardee/persistent_http)
+  for ruby I've found in [persistent_http](https://github.com/bpardee/persistent_http)
 * To @vibes for letting me open source as much of the work I do there
   as possible.
 
