@@ -6,10 +6,7 @@ module HTTParty::Persistent
     attr_accessor :persistent_http
 
     def call(uri, options)
-      if @persistent_http.nil?
-        @persistent_http = build_persistent_http(uri, options)
-      end
-      @persistent_http
+      @persistent_http ||= build_persistent_http(uri, options)
     end
 
     def build_persistent_http(uri, options)
